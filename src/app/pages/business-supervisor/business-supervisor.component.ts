@@ -1,11 +1,10 @@
 import { AfterViewInit, ChangeDetectorRef, Component } from '@angular/core';
 import * as echarts from 'echarts';
 
-
 @Component({
   selector: 'app-business-supervisor',
   templateUrl: './business-supervisor.component.html',
-  styleUrls: ['./business-supervisor.component.scss']
+  styleUrls: ['./business-supervisor.component.scss'],
 })
 export class BusinessSupervisorComponent {
   PotentialLostBusinessChart!: echarts.ECharts;
@@ -14,9 +13,9 @@ export class BusinessSupervisorComponent {
   IrrPfInsuranceChart!: echarts.ECharts;
 
   PotentialLostBusinessOption: any;
-  DistributionMixOption:any;
-  SourceLoginOption:any;
-  IrrPfInsuranceOption:any;
+  DistributionMixOption: any;
+  SourceLoginOption: any;
+  IrrPfInsuranceOption: any;
 
   states: string[] = [
     'Pan India',
@@ -45,7 +44,6 @@ export class BusinessSupervisorComponent {
 
   stateApprovalOption: any;
 
-
   progressValue1: number = 60;
   progressValue2: number = 15;
   progressValue3: number = 25;
@@ -73,15 +71,10 @@ export class BusinessSupervisorComponent {
 
   initializeChart() {
     if (!this.isToggled) {
-   
-      
       this.IrrPfInsuranceChart = echarts.init(
         document.getElementById('Irr-pf-Insurance') as HTMLDivElement
       );
 
-
-
-      
       this.IrrPfInsuranceOption = {
         legend: {},
         tooltip: {},
@@ -89,10 +82,10 @@ export class BusinessSupervisorComponent {
           dimensions: ['product', 'Branch target', 'Achievement'],
           source: [
             { product: 'Chandigarh', 'Branch target': 100, Achievement: 82 },
-            { product: 'Rohtak', 'Branch target': 95, Achievement: 90},
+            { product: 'Rohtak', 'Branch target': 95, Achievement: 90 },
             { product: 'Karnal', 'Branch target': 85, Achievement: 110 },
-            { product: 'Sonipat', 'Branch target':85, Achievement: 100 },
-            { product: 'Ambala', 'Branch target': 70, Achievement: 70},
+            { product: 'Sonipat', 'Branch target': 85, Achievement: 100 },
+            { product: 'Ambala', 'Branch target': 70, Achievement: 70 },
           ],
         },
         xAxis: {
@@ -105,7 +98,7 @@ export class BusinessSupervisorComponent {
           type: 'category',
           axisLabel: {
             interval: 0,
-            
+
             overflow: 'break',
           },
         },
@@ -128,36 +121,28 @@ export class BusinessSupervisorComponent {
           nameGap: 25,
           nameTextStyle: {
             fontWeight: 600,
-            fontSize:14,
+            fontSize: 14,
           },
-
         },
-        // Declare several bar series, each will be mapped
-        // to a column of dataset.source by default.
         series: [
           {
             type: 'bar',
-            barWidth:20,
+            barWidth: 20,
             itemStyle: {
               color: '#F0997D', // Set the color for the first bar series (IRR)
             },
           },
           {
             type: 'bar',
-            barWidth:20,
+            barWidth: 20,
             itemStyle: {
               color: '#F0B86E', // Set the color for the first bar series (IRR)
             },
           },
-          
         ],
       };
 
-
-
-      this.IrrPfInsuranceChart.setOption(
-        this.IrrPfInsuranceOption
-      );
+      this.IrrPfInsuranceChart.setOption(this.IrrPfInsuranceOption);
     } else {
     }
   }
@@ -186,4 +171,3 @@ export class BusinessSupervisorComponent {
 
   onTrendFilterChange(selectedValue: string) {}
 }
-

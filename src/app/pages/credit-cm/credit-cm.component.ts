@@ -4,7 +4,7 @@ import * as echarts from 'echarts';
 @Component({
   selector: 'app-credit-cm',
   templateUrl: './credit-cm.component.html',
-  styleUrls: ['./credit-cm.component.scss']
+  styleUrls: ['./credit-cm.component.scss'],
 })
 export class CreditCmComponent {
   PotentialLostBusinessChart!: echarts.ECharts;
@@ -13,9 +13,9 @@ export class CreditCmComponent {
   IrrPfInsuranceChart!: echarts.ECharts;
 
   PotentialLostBusinessOption: any;
-  DistributionMixOption:any;
-  SourceLoginOption:any;
-  IrrPfInsuranceOption:any;
+  DistributionMixOption: any;
+  SourceLoginOption: any;
+  IrrPfInsuranceOption: any;
 
   states: string[] = [
     'Pan India',
@@ -71,7 +71,7 @@ export class CreditCmComponent {
       this.SourceLoginChart = echarts.init(
         document.getElementById('source-login-chart') as HTMLDivElement
       );
-      
+
       this.IrrPfInsuranceChart = echarts.init(
         document.getElementById('Irr-pf-Insurance') as HTMLDivElement
       );
@@ -157,7 +157,7 @@ export class CreditCmComponent {
         tooltip: {
           trigger: 'item',
         },
-        responsive: true, 
+        responsive: true,
         legend: {
           top: '2%',
           left: 'center',
@@ -360,7 +360,7 @@ export class CreditCmComponent {
                 opacity: 1, // Reduce opacity on hover to make it semi-transparent
               },
             },
-            data: [45, 47, 49, 47,50, 53],
+            data: [45, 47, 49, 47, 50, 53],
           },
           {
             name: 'Insurance',
@@ -384,15 +384,9 @@ export class CreditCmComponent {
         this.PotentialLostBusinessOption
       );
 
-      this.DistributionMixChart.setOption(
-        this.DistributionMixOption
-      );
-      this.SourceLoginChart.setOption(
-        this.SourceLoginOption
-      );
-      this.IrrPfInsuranceChart.setOption(
-        this.IrrPfInsuranceOption
-      );
+      this.DistributionMixChart.setOption(this.DistributionMixOption);
+      this.SourceLoginChart.setOption(this.SourceLoginOption);
+      this.IrrPfInsuranceChart.setOption(this.IrrPfInsuranceOption);
     } else {
     }
   }
@@ -421,4 +415,3 @@ export class CreditCmComponent {
 
   onTrendFilterChange(selectedValue: string) {}
 }
-

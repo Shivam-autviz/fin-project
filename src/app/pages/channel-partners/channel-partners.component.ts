@@ -164,11 +164,11 @@ export class ChannelPartnersComponent {
     private elementRef: ElementRef,
     private zone: NgZone,
     private cdRef: ChangeDetectorRef
-  ) { }
+  ) {}
 
-  onFilterChange(selectedValue: string) { }
+  onFilterChange(selectedValue: string) {}
 
-  onStateChange(selectedValue: string) { }
+  onStateChange(selectedValue: string) {}
 
   setActiveButton(button: string) {
     setTimeout(() => {
@@ -179,7 +179,7 @@ export class ChannelPartnersComponent {
         $(this.elementRef.nativeElement.querySelector('#table')).DataTable({
           lengthChange: false,
           searching: false,
-          ordering: false
+          ordering: false,
         });
       }, 0);
     });
@@ -225,29 +225,50 @@ export class ChannelPartnersComponent {
 
     this.CPDetailsOption = {
       legend: {
-
         textStyle: {
           color: '#333',
         },
         itemWidth: 20, // Adjust the width of legend items
         itemHeight: 20,
-        borderRadius: 10, 
-        
-    
+        borderRadius: 10,
       },
       tooltip: {},
       dataset: {
-        dimensions: ['state', 'Total Number of CP’s', 'Active CP’s',],
+        dimensions: ['state', 'Total Number of CP’s', 'Active CP’s'],
 
         source: [
-          { state: 'Pan India', 'Total Number of CP’s': 1410, 'Active CP’s': 1250 },
-          { state: 'Punjab', 'Total Number of CP’s': 1400, 'Active CP’s': 1230 },
-          { state: 'Haryana', 'Total Number of CP’s': 1450, 'Active CP’s': 1370 },
+          {
+            state: 'Pan India',
+            'Total Number of CP’s': 1410,
+            'Active CP’s': 1250,
+          },
+          {
+            state: 'Punjab',
+            'Total Number of CP’s': 1400,
+            'Active CP’s': 1230,
+          },
+          {
+            state: 'Haryana',
+            'Total Number of CP’s': 1450,
+            'Active CP’s': 1370,
+          },
           { state: 'NCR', 'Total Number of CP’s': 1400, 'Active CP’s': 1190 },
-          { state: 'Rajasthan', 'Total Number of CP’s': 1480, 'Active CP’s': 1350 },
-          { state: 'Gujarat', 'Total Number of CP’s': 1400, 'Active CP’s': 1190 },
+          {
+            state: 'Rajasthan',
+            'Total Number of CP’s': 1480,
+            'Active CP’s': 1350,
+          },
+          {
+            state: 'Gujarat',
+            'Total Number of CP’s': 1400,
+            'Active CP’s': 1190,
+          },
           { state: 'MP', 'Total Number of CP’s': 1430, 'Active CP’s': 1340 },
-          { state: 'Maharashtra', 'Total Number of CP’s': 1400, 'Active CP’s': 1260 },
+          {
+            state: 'Maharashtra',
+            'Total Number of CP’s': 1400,
+            'Active CP’s': 1260,
+          },
         ],
       },
       xAxis: {
@@ -283,25 +304,23 @@ export class ChannelPartnersComponent {
         nameGap: 40,
         nameTextStyle: {
           fontWeight: 600,
-          fontSize:14,
+          fontSize: 14,
         },
       },
-      // Declare several bar series, each will be mapped
-      // to a column of dataset.source by default.
+
       series: [
         {
           type: 'bar',
           itemStyle: {
-            color: '#3282B8', // Set the color for the first bar series (IRR)
+            color: '#3282B8',
           },
         },
         {
           type: 'bar',
           itemStyle: {
-            color: '#3FC1C9', // Set the color for the first bar series (IRR)
+            color: '#3FC1C9',
           },
         },
-
       ],
     };
 
@@ -313,9 +332,9 @@ export class ChannelPartnersComponent {
         },
         formatter: (params: any) => {
           const barValue = params[0].value;
-          const totalLogin = 340
+          const totalLogin = 340;
           const dataIndex = params[0].dataIndex;
-          const percentage = [40, 45, 70,77,89,67,45];
+          const percentage = [40, 45, 70, 77, 89, 67, 45];
           const randomPerc = percentage[dataIndex];
           // Create the tooltip content with the actual value and random amount
           return `CP login: ${barValue} <br>Total Login:${totalLogin} <br>  ${randomPerc}% `;
@@ -361,7 +380,7 @@ export class ChannelPartnersComponent {
         nameGap: 40,
         nameTextStyle: {
           fontWeight: 600,
-          fontSize:14,
+          fontSize: 14,
         },
         axisLabel: {
           formatter: '{value}',
@@ -388,11 +407,11 @@ export class ChannelPartnersComponent {
         },
         formatter: (params: any) => {
           const barValue = params[0].value;
-          const total = 340
+          const total = 340;
           const dataIndex = params[0].dataIndex;
-          const amount = [140, 145, 170,177,189,167,245];
+          const amount = [140, 145, 170, 177, 189, 167, 245];
           const disbursalAmount = amount[dataIndex];
-          // Create the tooltip content with the actual value and random amount
+
           return `Total disbursal (amount in Cr): ${total} <br>CP disbursal (amount in Cr) :${disbursalAmount} <br>  ${barValue}% `;
         },
       },
@@ -436,7 +455,7 @@ export class ChannelPartnersComponent {
         nameGap: 40,
         nameTextStyle: {
           fontWeight: 600,
-          fontSize:14,
+          fontSize: 14,
         },
         axisLabel: {
           formatter: '{value}',
@@ -463,21 +482,17 @@ export class ChannelPartnersComponent {
         },
         formatter: (params: any) => {
           const barValue = params[0].value;
-
-          // Create the tooltip content with the actual value and random amount
           return ` ${barValue}%`;
         },
       },
       legend: {
-       data:['Overall','CP'],
+        data: ['Overall', 'CP'],
         textStyle: {
           color: '#333',
         },
-        itemWidth: 20, // Adjust the width of legend items
+        itemWidth: 20,
         itemHeight: 20,
-        borderRadius: 10, 
-        
-    
+        borderRadius: 10,
       },
       xAxis: {
         type: 'category',
@@ -519,7 +534,7 @@ export class ChannelPartnersComponent {
         nameGap: 40,
         nameTextStyle: {
           fontWeight: 600,
-          fontSize:14,
+          fontSize: 14,
         },
         axisLabel: {
           formatter: '{value}',
@@ -528,7 +543,7 @@ export class ChannelPartnersComponent {
       },
       series: [
         {
-          name:'Overall',
+          name: 'Overall',
           barWidth: 20,
           data: [0.95, 1.15, 1.05, 1.15, 1.03, 1.15, 1.03],
           type: 'bar',
@@ -537,9 +552,9 @@ export class ChannelPartnersComponent {
           },
         },
         {
-          name:'CP',
+          name: 'CP',
           barWidth: 20,
-          data: [0.90, 1.17, 1.01, 1.18, 1.00, 1.17, 1.00],
+          data: [0.9, 1.17, 1.01, 1.18, 1.0, 1.17, 1.0],
           type: 'bar',
           itemStyle: {
             color: '#D2BEFB',

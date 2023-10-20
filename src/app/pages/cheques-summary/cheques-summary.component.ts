@@ -186,7 +186,7 @@ export class ChequesSummaryComponent {
     this.data.forEach(item => {
       item.SNo = Math.floor(Math.random() * 1000) + 1;
       item.leadNo = '0109';
-      item.custName = 'Anita'; // You can generate random names if you have a list of names
+      item.custName = 'Anita'; 
       item.product = 'BL';
       item.scheme = 'BT';
       item.loanAmount = 12.5;

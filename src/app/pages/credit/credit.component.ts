@@ -458,7 +458,7 @@ export class CreditComponent {
         nameGap: 20,
         nameTextStyle: {
           fontWeight: 600,
-          fontSize:14,
+          fontSize: 14,
         },
         axisLabel: {
           formatter: '{value}',
@@ -533,7 +533,7 @@ export class CreditComponent {
             show: false,
           },
           axisTick: {
-            show: false, // Hide tick lines
+            show: false,
           },
         },
       ],
@@ -544,7 +544,7 @@ export class CreditComponent {
             show: false,
           },
           axisTick: {
-            show: false, // Hide tick lines
+            show: false,
           },
           splitLine: {
             show: false,
@@ -556,7 +556,7 @@ export class CreditComponent {
           nameLocation: 'middle',
           nameTextStyle: {
             fontWeight: 600,
-            fontSize:14,
+            fontSize: 14,
           },
           nameGap: 7,
           axisLabel: {
@@ -575,7 +575,7 @@ export class CreditComponent {
           emphasis: {
             focus: 'series',
             areaStyle: {
-              opacity: 0.5, // Reduce opacity on hover to make it semi-transparent
+              opacity: 0.5,
             },
           },
           data: [3, 2.8, 3.2, 3.1, 2.8, 2.8, 3],
@@ -593,7 +593,7 @@ export class CreditComponent {
           emphasis: {
             focus: 'series',
             areaStyle: {
-              opacity: 0.5, // Reduce opacity on hover to make it semi-transparent
+              opacity: 0.5,
             },
           },
           data: [2.3, 2.1, 2.2, 2, 2.3, 2.4, 2.1],
@@ -611,7 +611,7 @@ export class CreditComponent {
           emphasis: {
             focus: 'series',
             areaStyle: {
-              opacity: 0.5, // Reduce opacity on hover to make it semi-transparent
+              opacity: 0.5,
             },
           },
           data: [1.8, 1.9, 1.7, 1.5, 1.9, 1.8, 1.7],
@@ -633,7 +633,6 @@ export class CreditComponent {
           const dataIndex = params[0].dataIndex;
           const amount = [405, 456, 707, 770, 89, 675, 459];
           const randomAmount = amount[dataIndex];
-          // Create the tooltip content with the actual value and random amount
           return `Amount in Crs: ${randomAmount} <br>${barValue}%  `;
         },
       },
@@ -659,7 +658,7 @@ export class CreditComponent {
           show: false,
         },
         axisTick: {
-          show: false, // Hide tick lines
+          show: false,
         },
       },
       yAxis: {
@@ -671,7 +670,7 @@ export class CreditComponent {
           show: false,
         },
         axisTick: {
-          show: false, // Hide tick lines
+          show: false,
         },
         splitLine: {
           show: false,
@@ -681,7 +680,7 @@ export class CreditComponent {
         nameGap: 15,
         nameTextStyle: {
           fontWeight: 600,
-          fontSize:14,
+          fontSize: 14,
         },
         axisLabel: {
           formatter: '{value}',
@@ -712,7 +711,7 @@ export class CreditComponent {
         },
         formatter: (params: any) => {
           const barValue = params[0].value;
-         
+
           // Create the tooltip content with the actual value and random amount
           return `${barValue} % `;
         },
@@ -777,7 +776,7 @@ export class CreditComponent {
           nameGap: 20,
           nameTextStyle: {
             fontWeight: 600,
-            fontSize:14,
+            fontSize: 14,
           },
           axisLabel: {
             margin: 1,

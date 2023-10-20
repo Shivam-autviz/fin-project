@@ -13,9 +13,7 @@ import { ThreeSixtyComponent } from './pages/three-sixty/three-sixty.component';
 import { ProductivitySalesComponent } from './pages/productivity-sales/productivity-sales.component';
 import { ChannelPartnersComponent } from './pages/channel-partners/channel-partners.component';
 import { CreditComponent } from './pages/credit/credit.component';
-
 import { WorkInProgressComponent } from './pages/work-in-progress/work-in-progress.component';
-
 import { TechnicalComponent } from './pages/technical/technical.component';
 import { LegalComponent } from './pages/legal/legal.component';
 import { ChequesSummaryComponent } from './pages/cheques-summary/cheques-summary.component';
@@ -29,13 +27,9 @@ import { WorkInProgressTablesComponent } from './pages/work-in-progress-tables/w
 import { PortfolioHealthComponent } from './pages/portfolio-health/portfolio-health.component';
 import { FinalApprovalComponent } from './pages/final-approval/final-approval.component';
 import { TeamHierarchyComponent } from './pages/team-hierarchy/team-hierarchy.component';
-
 import { SearchingBasisComponent } from './pages/searching-basis/searching-basis.component';
-
 import { BranchSearchComponent } from './pages/branch-search/branch-search.component';
 import { TatLoginTableComponent } from './pages/tat-login-table/tat-login-table.component';
-
-
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -53,9 +47,7 @@ const routes: Routes = [
   { path: 'productivity/sales', component: ProductivitySalesComponent },
   { path: 'productivity/channel-partner', component: ChannelPartnersComponent },
   { path: 'productivity/credit', component: CreditComponent },
-
   { path: 'work-in-progress', component: WorkInProgressComponent },
-
   { path: 'productivity/technical', component: TechnicalComponent },
   { path: 'productivity/legal', component: LegalComponent },
   { path: 'sanctioned-undisbursed-cases', component: ChequesSummaryComponent },
@@ -65,13 +57,13 @@ const routes: Routes = [
   { path: 'credit-cm', component: CreditCmComponent },
   { path: 'credit-supervisor', component: CreditSupervisorComponent },
   { path: 'out-of-tat', component: OutOfTatComponent },
-  { path: 'work-in-progress-table/:data', component: WorkInProgressTablesComponent },
-
+  {
+    path: 'work-in-progress-table/:data',
+    component: WorkInProgressTablesComponent,
+  },
   { path: 'portfolio-health', component: PortfolioHealthComponent },
   { path: 'team-hierarchy', component: TeamHierarchyComponent },
-
   { path: 'search', component: SearchingBasisComponent },
-
   { path: 'branch-search', component: BranchSearchComponent },
   { path: 'login-tat-table/:data', component: TatLoginTableComponent },
 ];

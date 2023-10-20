@@ -286,10 +286,6 @@ export class LegalComponent {
       ],
     };
 
-  
-
-    // Create your chart using the above option object
-
     this.TatChart.setOption(this.TatOption);
     this.TMChart.setOption(this.TMOption);
    

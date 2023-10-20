@@ -47,8 +47,6 @@ import { SearchingBasisComponent } from './pages/searching-basis/searching-basis
 import { BranchSearchComponent } from './pages/branch-search/branch-search.component';
 import { TatLoginTableComponent } from './pages/tat-login-table/tat-login-table.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,9 +65,7 @@ import { TatLoginTableComponent } from './pages/tat-login-table/tat-login-table.
     ProductivitySalesComponent,
     ChannelPartnersComponent,
     CreditComponent,
-
     WorkInProgressComponent,
-
     TechnicalComponent,
     LegalComponent,
     BusinessRMComponent,
@@ -83,14 +79,9 @@ import { TatLoginTableComponent } from './pages/tat-login-table/tat-login-table.
     PortfolioHealthComponent,
     FinalApprovalComponent,
     TeamHierarchyComponent,
-
     SearchingBasisComponent,
-
     BranchSearchComponent,
-      TatLoginTableComponent,
-
-
-
+    TatLoginTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -99,9 +90,9 @@ import { TatLoginTableComponent } from './pages/tat-login-table/tat-login-table.
     FormsModule,
     BrowserAnimationsModule,
     TreeTableModule,
-    OrganizationChartModule
+    OrganizationChartModule,
   ],
   providers: [SidebarComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

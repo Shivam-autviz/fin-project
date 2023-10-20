@@ -486,25 +486,24 @@ export class BranchSearchComponent {
         nameLocation: 'middle',
         nameGap: 25,
       },
-      // Declare several bar series, each will be mapped
-      // to a column of dataset.source by default.
+     
       series: [
         {
           type: 'bar',
           itemStyle: {
-            color: '#636363', // Set the color for the first bar series (IRR)
+            color: '#636363', 
           },
         },
         {
           type: 'bar',
           itemStyle: {
-            color: '#F99B00', // Set the color for the first bar series (IRR)
+            color: '#F99B00', 
           },
         },
         {
           type: 'bar',
           itemStyle: {
-            color: '#4FC3F7', // Set the color for the first bar series (IRR)
+            color: '#4FC3F7', 
           },
         },
       ],
@@ -518,7 +517,7 @@ export class BranchSearchComponent {
       legend: {
         top: '5%',
         left: 'center',
-        // doesn't perfectly work with our tricks, disable it
+
         selectedMode: false,
       },
       series: [
@@ -527,7 +526,7 @@ export class BranchSearchComponent {
           type: 'pie',
           radius: ['40%', '70%'],
           center: ['50%', '70%'],
-          // adjust the start angle
+
           startAngle: 180,
           labelLine:{
             show:false,
@@ -542,10 +541,10 @@ export class BranchSearchComponent {
             { value: 484, name: 'UPI', itemStyle: { color: '#636363' } },
 
             {
-              // make an record to fill the bottom 50%
+            
               value: 104 + 235 + 380 + 484 + 300,
               itemStyle: {
-                // stop the chart from rendering this piece
+               
                 color: 'none',
                 decal: {
                   symbol: 'none',

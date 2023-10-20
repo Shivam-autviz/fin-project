@@ -1,437 +1,403 @@
 .tree {
     padding: 0;
-}
-.tree:not(:empty):before, .tree:not(:empty):after, .tree ul:not(:empty):before, .tree ul:not(:empty):after, .tree li:not(:empty):before, .tree li:not(:empty):after {
+  }
+  .tree li:not(:empty):after,
+  .tree li:not(:empty):before,
+  .tree ul:not(:empty):after,
+  .tree ul:not(:empty):before,
+  .tree:not(:empty):after,
+  .tree:not(:empty):before {
     display: block;
     position: absolute;
     content: "";
-}
-.tree ul, .tree li {
+  }
+  .tree li,
+  .tree ul {
     position: relative;
     margin: 0;
     padding: 0;
-}
-.main-tree-head {
-    background: transparent !important;
-    border: 1px solid #BEBABA;
+  }
+  .main-tree-head {
+    background: 0 0 !important;
+    border: 1px solid #bebaba;
     padding: 16px 30px !important;
-}
-.tree li {
+  }
+  .tree li {
     list-style: none;
-}
-.tree li > div {
+  }
+  .tree li > div {
     border: 1px solid #bfbfbf4f;
     color: #222;
     padding: 9px 15px;
     display: inline-block;
     font-size: 11px;
     border-radius: 4px;
-}
-.tree.vertical {
+  }
+  .tree.vertical {
     display: flex;
     overflow-x: auto;
     width: 100%;
-}
-.binery-tree-steps{
+  }
+  .binery-tree-steps {
     max-width: 1300px;
-    width:100%;
-}
-.wip-tree-second-step{
-    left:6.5%
-}
-.wip-tree-third-step{
-    right:6.5%
-}
-.wip-tree-fourth-step{
-    right:6.5% 
-}
-.binery-tree-final-done{
-    right:6.5% 
-}
-.tree.vertical ul {
+    width: 100%;
+  }
+  .wip-tree-second-step {
+    left: 6.5%;
+  }
+  .binery-tree-final-done,
+  .wip-tree-fourth-step,
+  .wip-tree-third-step {
+    right: 6.5%;
+  }
+  .tree.vertical ul {
     display: flex;
     justify-content: center;
-}
-.tree.vertical li {
+  }
+  .tree.vertical li {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.tree.vertical li div {
+  }
+  .tree.vertical li div {
     margin: 12px 6px;
-}
-.tree.vertical li:before {
+  }
+  .tree.vertical li:before {
     border-left: 1px solid #ddd;
     height: 12px;
     width: 0;
     top: 0;
-}
-.tree.vertical li:after {
+  }
+  .tree.vertical li:after {
     border-top: 1px solid #ddd;
     height: 0;
     width: 100%;
-}
-.tree.vertical li:first-child:after {
+  }
+  .tree.vertical li:first-child:after {
     border-top: 1px solid #ddd;
     height: 0;
     width: 50%;
     left: 50%;
-}
-.tree.vertical li:last-child:after {
+  }
+  .tree.vertical li:last-child:after {
     border-top: 1px solid #ddd;
     height: 0;
     width: 50%;
     right: 50%;
-}
-.tree.vertical li:only-child:after {
+  }
+  .tree.vertical li:only-child:after,
+  .tree.vertical > li:only-child:after,
+  .tree.vertical > li:only-child:before {
     content: none;
-}
-.tree.vertical li ul:before {
+  }
+  .tree.vertical li ul:before {
     border-left: 1px solid #ddd;
     height: 12px;
     width: 0;
     top: -12px;
-}
-.tree.vertical > li:only-child:before, .tree.vertical > li:only-child:after {
-    content: none;
-}
-.tree .tree.vertical .cascade, .tree.vertical .tree .cascade, .tree .tree.vertical.cascade-1 > li, .tree .tree.vertical.cascade-2 > li > ul > li, .tree .tree.vertical.cascade-3 > li > ul > li > ul > li, .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li {
+  }
+  .tree .tree.vertical .cascade,
+  .tree .tree.vertical.cascade-1 > li,
+  .tree .tree.vertical.cascade-2 > li > ul > li,
+  .tree .tree.vertical.cascade-3 > li > ul > li > ul > li,
+  .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li,
+  .tree.vertical .tree .cascade {
     flex-direction: column;
     align-items: start;
     padding: 0 12px;
-}
-.tree .tree.vertical .cascade:before, .tree.vertical .tree .cascade:before, .tree .tree.vertical.cascade-1 > li:before, .tree .tree.vertical.cascade-2 > li > ul > li:before, .tree .tree.vertical.cascade-3 > li > ul > li > ul > li:before, .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li:before {
+  }
+  .tree .tree.vertical .cascade:before,
+  .tree .tree.vertical.cascade-1 > li:before,
+  .tree .tree.vertical.cascade-2 > li > ul > li:before,
+  .tree .tree.vertical.cascade-3 > li > ul > li > ul > li:before,
+  .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li:before,
+  .tree.vertical .tree .cascade:before {
     left: 24px;
-}
-.tree .tree.vertical .cascade:after, .tree.vertical .tree .cascade:after, .tree .tree.vertical.cascade-1 > li:after, .tree .tree.vertical.cascade-2 > li > ul > li:after, .tree .tree.vertical.cascade-3 > li > ul > li > ul > li:after, .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li:after {
+  }
+  .tree .tree.vertical .cascade:after,
+  .tree .tree.vertical.cascade-1 > li:after,
+  .tree .tree.vertical.cascade-2 > li > ul > li:after,
+  .tree .tree.vertical.cascade-3 > li > ul > li > ul > li:after,
+  .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li:after,
+  .tree.vertical .tree .cascade:after {
     left: 0;
-}
-.tree .tree.vertical .cascade:first-child:after, .tree.vertical .tree .cascade:first-child:after, .tree .tree.vertical.cascade-1 > li:first-child:after, .tree .tree.vertical.cascade-2 > li > ul > li:first-child:after, .tree .tree.vertical.cascade-3 > li > ul > li > ul > li:first-child:after, .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li:first-child:after {
+  }
+  .tree .tree.vertical .cascade:first-child:after,
+  .tree .tree.vertical.cascade-1 > li:first-child:after,
+  .tree .tree.vertical.cascade-2 > li > ul > li:first-child:after,
+  .tree .tree.vertical.cascade-3 > li > ul > li > ul > li:first-child:after,
+  .tree
+    .tree.vertical.cascade-4
+    > li
+    > ul
+    > li
+    > ul
+    > li
+    > ul
+    > li:first-child:after,
+  .tree.vertical .tree .cascade:first-child:after {
     left: 24px;
     width: 100%;
-}
-.tree .tree.vertical .cascade:last-child:after, .tree.vertical .tree .cascade:last-child:after, .tree .tree.vertical.cascade-1 > li:last-child:after, .tree .tree.vertical.cascade-2 > li > ul > li:last-child:after, .tree .tree.vertical.cascade-3 > li > ul > li > ul > li:last-child:after, .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li:last-child:after {
+  }
+  .tree .tree.vertical .cascade:last-child:after,
+  .tree .tree.vertical.cascade-1 > li:last-child:after,
+  .tree .tree.vertical.cascade-2 > li > ul > li:last-child:after,
+  .tree .tree.vertical.cascade-3 > li > ul > li > ul > li:last-child:after,
+  .tree
+    .tree.vertical.cascade-4
+    > li
+    > ul
+    > li
+    > ul
+    > li
+    > ul
+    > li:last-child:after,
+  .tree.vertical .tree .cascade:last-child:after {
     left: 0;
     width: 24px;
-}
-.tree .tree.vertical .cascade ul, .tree.vertical .tree .cascade ul, .tree .tree.vertical.cascade-1 > li ul, .tree .tree.vertical.cascade-2 > li > ul > li ul, .tree .tree.vertical.cascade-3 > li > ul > li > ul > li ul, .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li ul, .tree .tree.vertical .cascade li, .tree.vertical .tree .cascade li, .tree .tree.vertical.cascade-1 > li li, .tree .tree.vertical.cascade-2 > li > ul > li li, .tree .tree.vertical.cascade-3 > li > ul > li > ul > li li, .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li li {
+  }
+  .tree .tree.vertical .cascade li,
+  .tree .tree.vertical .cascade ul,
+  .tree .tree.vertical.cascade-1 > li li,
+  .tree .tree.vertical.cascade-1 > li ul,
+  .tree .tree.vertical.cascade-2 > li > ul > li li,
+  .tree .tree.vertical.cascade-2 > li > ul > li ul,
+  .tree .tree.vertical.cascade-3 > li > ul > li > ul > li li,
+  .tree .tree.vertical.cascade-3 > li > ul > li > ul > li ul,
+  .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li li,
+  .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li ul,
+  .tree.vertical .tree .cascade li,
+  .tree.vertical .tree .cascade ul {
     display: block;
-}
-.tree .tree.vertical .cascade ul:before, .tree.vertical .tree .cascade ul:before, .tree .tree.vertical.cascade-1 > li ul:before, .tree .tree.vertical.cascade-2 > li > ul > li ul:before, .tree .tree.vertical.cascade-3 > li > ul > li > ul > li ul:before, .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li ul:before, .tree .tree.vertical .cascade ul:after, .tree.vertical .tree .cascade ul:after, .tree .tree.vertical.cascade-1 > li ul:after, .tree .tree.vertical.cascade-2 > li > ul > li ul:after, .tree .tree.vertical.cascade-3 > li > ul > li > ul > li ul:after, .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li ul:after, .tree .tree.vertical .cascade li:before, .tree.vertical .tree .cascade li:before, .tree .tree.vertical.cascade-1 > li li:before, .tree .tree.vertical.cascade-2 > li > ul > li li:before, .tree .tree.vertical.cascade-3 > li > ul > li > ul > li li:before, .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li li:before, .tree .tree.vertical .cascade li:after, .tree.vertical .tree .cascade li:after, .tree .tree.vertical.cascade-1 > li li:after, .tree .tree.vertical.cascade-2 > li > ul > li li:after, .tree .tree.vertical.cascade-3 > li > ul > li > ul > li li:after, .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li li:after {
+  }
+  .tree .tree.vertical .cascade li:after,
+  .tree .tree.vertical .cascade li:before,
+  .tree .tree.vertical .cascade ul:after,
+  .tree .tree.vertical .cascade ul:before,
+  .tree .tree.vertical.cascade-1 > li li:after,
+  .tree .tree.vertical.cascade-1 > li li:before,
+  .tree .tree.vertical.cascade-1 > li ul:after,
+  .tree .tree.vertical.cascade-1 > li ul:before,
+  .tree .tree.vertical.cascade-2 > li > ul > li li:after,
+  .tree .tree.vertical.cascade-2 > li > ul > li li:before,
+  .tree .tree.vertical.cascade-2 > li > ul > li ul:after,
+  .tree .tree.vertical.cascade-2 > li > ul > li ul:before,
+  .tree .tree.vertical.cascade-3 > li > ul > li > ul > li li:after,
+  .tree .tree.vertical.cascade-3 > li > ul > li > ul > li li:before,
+  .tree .tree.vertical.cascade-3 > li > ul > li > ul > li ul:after,
+  .tree .tree.vertical.cascade-3 > li > ul > li > ul > li ul:before,
+  .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li li:after,
+  .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li li:before,
+  .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li ul:after,
+  .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li ul:before,
+  .tree.vertical .tree .cascade li:after,
+  .tree.vertical .tree .cascade li:before,
+  .tree.vertical .tree .cascade ul:after,
+  .tree.vertical .tree .cascade ul:before {
     border: none;
-}
-.tree .tree.vertical .cascade div, .tree.vertical .tree .cascade div, .tree .tree.vertical.cascade-1 > li div, .tree .tree.vertical.cascade-2 > li > ul > li div, .tree .tree.vertical.cascade-3 > li > ul > li > ul > li div, .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li div {
-    margin: 0;
-    margin-top: 12px;
-}
-.tree .tree.vertical .cascade li, .tree.vertical .tree .cascade li, .tree .tree.vertical.cascade-1 > li li, .tree .tree.vertical.cascade-2 > li > ul > li li, .tree .tree.vertical.cascade-3 > li > ul > li > ul > li li, .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li li {
+  }
+  .tree .tree.vertical .cascade div,
+  .tree .tree.vertical.cascade-1 > li div,
+  .tree .tree.vertical.cascade-2 > li > ul > li div,
+  .tree .tree.vertical.cascade-3 > li > ul > li > ul > li div,
+  .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li div,
+  .tree.vertical .tree .cascade div {
+    margin: 12px 0 0;
+  }
+  .tree .tree.vertical .cascade li,
+  .tree .tree.vertical.cascade-1 > li li,
+  .tree .tree.vertical.cascade-2 > li > ul > li li,
+  .tree .tree.vertical.cascade-3 > li > ul > li > ul > li li,
+  .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li li,
+  .tree.vertical .tree .cascade li {
     margin-left: 24px;
-}
-.tree .tree.vertical .cascade li:before, .tree.vertical .tree .cascade li:before, .tree .tree.vertical.cascade-1 > li li:before, .tree .tree.vertical.cascade-2 > li > ul > li li:before, .tree .tree.vertical.cascade-3 > li > ul > li > ul > li li:before, .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li li:before {
+  }
+  .tree .tree.vertical .cascade li:before,
+  .tree .tree.vertical.cascade-1 > li li:before,
+  .tree .tree.vertical.cascade-2 > li > ul > li li:before,
+  .tree .tree.vertical.cascade-3 > li > ul > li > ul > li li:before,
+  .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li li:before,
+  .tree.vertical .tree .cascade li:before {
     border-left: 1px solid #ddd;
     height: 100%;
     width: 0;
     top: 0;
     left: -12px;
-}
-.tree .tree.vertical .cascade li:after, .tree.vertical .tree .cascade li:after, .tree .tree.vertical.cascade-1 > li li:after, .tree .tree.vertical.cascade-2 > li > ul > li li:after, .tree .tree.vertical.cascade-3 > li > ul > li > ul > li li:after, .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li li:after {
+  }
+  .tree .tree.vertical .cascade li:after,
+  .tree .tree.vertical.cascade-1 > li li:after,
+  .tree .tree.vertical.cascade-2 > li > ul > li li:after,
+  .tree .tree.vertical.cascade-3 > li > ul > li > ul > li li:after,
+  .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li li:after,
+  .tree.vertical .tree .cascade li:after {
     border-top: 1px solid #ddd;
     width: 12px;
     height: 0;
     left: -12px;
     top: 24px;
     content: "";
-}
-.tree .tree.vertical .cascade li:last-child:before, .tree.vertical .tree .cascade li:last-child:before, .tree .tree.vertical.cascade-1 > li li:last-child:before, .tree .tree.vertical.cascade-2 > li > ul > li li:last-child:before, .tree .tree.vertical.cascade-3 > li > ul > li > ul > li li:last-child:before, .tree .tree.vertical.cascade-4 > li > ul > li > ul > li > ul > li li:last-child:before {
+  }
+  .tree .tree.vertical .cascade li:last-child:before,
+  .tree .tree.vertical.cascade-1 > li li:last-child:before,
+  .tree .tree.vertical.cascade-2 > li > ul > li li:last-child:before,
+  .tree .tree.vertical.cascade-3 > li > ul > li > ul > li li:last-child:before,
+  .tree
+    .tree.vertical.cascade-4
+    > li
+    > ul
+    > li
+    > ul
+    > li
+    > ul
+    > li
+    li:last-child:before,
+  .tree.vertical .tree .cascade li:last-child:before {
     height: 24px;
     top: 0;
-}
-ul.tree.vertical ul li div {
+  }
+  ul.tree.vertical ul li div {
     text-transform: uppercase;
-}
-ul.tree.vertical ul li div p{
+  }
+  ul.tree.vertical ul li div p {
     margin-bottom: 0;
     text-align: center;
-}
-.tree .box-s p {
+  }
+  .tree .box-s p {
     padding: 6px 11px;
     color: #fff;
     font-weight: 600;
     border-radius: 4px;
-}
-.bg-brown{
-    background-color: #982C09;
-}
-.bg-green{
-    background-color: #07A14E;
-}
-.bg-yellow{
-    background-color: #F6C342;
-}
-.divider {
-    position: relative;
-    width: 100%;
+  }
+  .divider,
+  .divider2 {
     border: none !important;
-}
-.bg-gray{
-    background-color: #6C757D;
-}
-.bg-bred{
-    background-color: #D04437;
-}
-.divider:after, .divider:before{
-      position: absolute;
-    content: '';
+    position: relative;
+  }
+  .bg-brown {
+    background-color: #982c09;
+  }
+  .bg-green {
+    background-color: #07a14e;
+  }
+  .bg-yellow {
+    background-color: #f6c342;
+  }
+  .divider {
+    width: 100%;
+  }
+  .bg-gray {
+    background-color: #6c757d;
+  }
+  .bg-bred {
+    background-color: #d04437;
+  }
+  .divider:after,
+  .divider:before {
+    position: absolute;
+    content: "";
     background: #e4e4e4;
     height: 1px;
     width: 31%;
-}
-.divider:after {
-    top: 0px;
+  }
+  .divider:after {
+    top: 0;
     left: 252px;
-}
-.divider:before {
-    top: 0px;
+  }
+  .divider:before {
+    top: 0;
     right: 252px;
-}
-.divider2 {
+  }
+  .divider2 {
     padding: 0 !important;
-    border: none !important;
     margin: 0 !important;
-    position: relative;
-}
-
-.divider2:after, .divider2:before {
+  }
+  .financial-drop table,
+  .work-tabs {
+    margin: 0 auto;
+  }
+  .divider2:after,
+  .divider2:before {
     position: absolute;
-    content: '';
+    content: "";
     background: #ddd;
     width: 1px;
     height: 25px;
-}
-.divider2:after{
+  }
+  .divider2:after {
     top: -54px;
     left: 413px;
-}
-.divider2:before{
+  }
+  .divider2:before {
     top: -54px;
     right: 413px;
-}
-.single-top-border .box-s.custom-top {
+  }
+  .single-top-border .box-s.custom-top {
     position: relative;
-}
-.single-top-border .box-s.custom-top:before {
+  }
+  .single-top-border .box-s.custom-top:before {
     position: absolute;
-    content: '';
+    content: "";
     height: 67px;
     width: 1px;
     background: #ccc;
     top: -68px;
     left: 75px;
-}
-
-
-.work-tabs ul.nav-pills {
-    border: 1px solid #908C8C;
+  }
+  .work-tabs ul.nav-pills {
+    border: 1px solid #908c8c;
     border-radius: 50px;
     overflow: hidden;
     padding: 1px;
-}
-.work-tabs ul li button {
+  }
+  .work-tabs ul li button {
     font-size: 13px;
     font-weight: 600;
     padding: 15px;
     color: #000;
-}
-.work-tabs .nav-pills .nav-link.active, .nav-pills .show>.nav-link button#pills-financial-tab {
-    background: #0747A6;
+  }
+  .nav-pills .show > .nav-link button#pills-financial-tab,
+  .work-tabs .nav-pills .nav-link.active {
+    background: #0747a6;
     padding: 15px;
     border-radius: 50px 0 0 50px;
     color: #000;
-}
-.work-tabs .nav-pills .nav-link.active{
+  }
+  .work-tabs .nav-pills .nav-link.active {
     color: #fff;
-}
-.work-tabs .nav-pills .nav-link.right-tab-border.active {
-    border-radius: 0px 50px 50px 0px;
-}
-.work-tabs {
+  }
+  .work-tabs .nav-pills .nav-link.right-tab-border.active {
+    border-radius: 0 50px 50px 0;
+  }
+  .work-tabs {
     width: fit-content;
-}
-.dot-purple {
+  }
+  .dot-purple {
     background-color: #8750ff;
-}
-.dot-orange {
-    background-color: #FF821C;
-}
-.disbursal-dots {
+  }
+  .dot-orange {
+    background-color: #ff821c;
+  }
+  .disbursal-dots {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-}
-.number-crore{
+  }
+  .number-crore {
     display: flex;
     justify-content: end;
-}
-.main-tree-head.login {
+  }
+  .main-tree-head.login {
     max-width: 250px;
     width: 100%;
-    border: 4px solid #0747A6 !important;
+    border: 4px solid #0747a6 !important;
     padding: 5px !important;
-}
-.main-tree-head.login h3{
-    color: #0747A6;
+  }
+  .main-tree-head.login h3 {
+    color: #0747a6;
     font-size: 22px !important;
-}
-
-.wip-binery-tree{
-  display: flex;
-  flex-direction: row;
-}
-
-// collapse table css
-::ng-deep{
-.p-organizationchart .p-organizationchart-node-content.p-organizationchart-selectable-node:not(.p-highlight):hover {
-    background: #e9ecef;
-    color: #495057;
   }
-  .p-organizationchart .p-organizationchart-node-content.p-highlight {
-    background: #EFF6FF;
-    color: #1D4ED8;
-  }
-  .p-organizationchart .p-organizationchart-node-content.p-highlight .p-node-toggler i {
-    color: #70aeff;
-  }
-  .p-organizationchart .p-organizationchart-line-down {
-    background: #dee2e6;
-  }
-  .p-organizationchart .p-organizationchart-line-left {
-    border-right: 1px solid #dee2e6;
-    border-color: #dee2e6;
-  }
-  .p-organizationchart .p-organizationchart-line-top {
-    border-top: 1px solid #dee2e6;
-    border-color: #dee2e6;
-  }
-  .p-organizationchart .p-organizationchart-node-content {
-    border: 1px solid #dee2e6;
-    background: #ffffff;
-    color: #495057;
-    padding: 1.25rem;
-  }
-  .p-organizationchart .p-organizationchart-node-content .p-node-toggler {
-    background: inherit;
-    color: inherit;
-    border-radius: 50%;
-  }
-  .p-organizationchart .p-organizationchart-node-content .p-node-toggler:focus-visible {
-    outline: 0 none;
-    outline-offset: 0;
-    box-shadow: 0 0 0 0.2rem #BFDBFE;
-  }
-  .financial-drop svg{
-    z-index: 9;
-    color: #000;
-  }
-  .financial-drop table{
-    margin: 0 auto;
-  }
-  .p-organizationchart-line-down {
-    margin: 0 auto;
-    height: 20px;
-    width: 1px;
-    }
-    .p-organizationchart-table > tbody > tr > td {
-        text-align: center;
-        vertical-align: top;
-        padding: 0 0.75rem;
-    }
-    .p-organizationchart-preservespace .p-organizationchart-node-hidden {
-        visibility: hidden;
-        display: inherit;
-    }
-    .p-organizationchart .p-organizationchart-node-hidden {
-        display: none;
-    }
-    .p-organizationchart-node-content .p-node-toggler {
-        position: absolute;
-        bottom: -0.75rem;
-        margin-left: -0.75rem;
-        z-index: 2;
-        left: 50%;
-        -webkit-user-select: none;
-        user-select: none;
-        cursor: pointer;
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-}
-// collapse table css ends
-
-
-@media (max-width: 991px){
-    .number-crore{
-        justify-content: center;
-    }
-    .work-tabs{
-        margin: 0 auto;
-    }
-}
-@media (max-width: 1470px){
-    .divider:after, .divider:before{
-      width: 34%;
-  }
-  .divider:after  {
-      left: 200px;
-  }
-  .divider:before{
-    right: 200px;
-  }
-}
-@media (max-width: 767px){
-    .work-tabs ul li{
-        margin: 0 auto;
-    }
-    .number-crore .indicators {
-        margin: 0 !important;
-    }
-.work-tabs ul.nav-pills {
-    padding: 0;
-}
-.work-tabs ul li button {
-    padding: 10px !important;
-    font-size: 12px !important;
-}
-ul#pills-tab {
-    display: block;
-    border-radius: 30px;
-    padding: 5px;
-}
-.work-tabs {
-    max-width: 100%;
-    border-radius: 10px;
-}
-button#pills-financial-tab {
-    border-radius: 50px;
-    width: 100%;
-}
-button#pills-status-tab {
-    width: 100%;
-    border-radius: 30px;
-}
-}
-@media (max-width: 567px){
-    .work-tabs .nav-pills .nav-link.active, .nav-pills .show>.nav-link button#pills-financial-tab {
-        border-radius: 50px !important;    
-    }
-    .work-tabs .nav-pills{
-        border: none !important;
-    }
-    .work-tabs .nav-pills .nav-link.right-tab-border.active {
-        border-radius: 50px !important;
-    }
-    .work-tabs .nav-pills .nav-link {
-        border-radius: 50px !important;
-        border: 1px solid #ccc;
-        margin:  5px 0px;
-    }
-}
+  .wip-binery-tree {
+    display: flex;
+    flex-direction: row;
+  } // collapse table css ::ng-deep{color:#1d4ed8}.p-organizationchart .p-organizationchart-node-content.p-highlight .p-node-toggler i{color:#70aeff}.p-organizationchart .p-organizationchart-line-down{background:#dee2e6}.p-organizationchart .p-organizationchart-line-left{border-right:1px solid #dee2e6;border-color:#dee2e6}.p-organizationchart .p-organizationchart-line-top{border-top:1px solid #dee2e6;border-color:#dee2e6}.p-organizationchart .p-organizationchart-node-content{border:1px solid #dee2e6;background:#fff;color:#495057;padding:1.25rem}.p-organizationchart .p-organizationchart-node-content .p-node-toggler{background:inherit;color:inherit;border-radius:50%}.p-organizationchart .p-organizationchart-node-content .p-node-toggler:focus-visible{outline:0;outline-offset:0;box-shadow:0 0 0 .2rem #bfdbfe}.financial-drop svg{z-index:9;color:#000}.p-organizationchart-line-down{margin:0 auto;height:20px;width:1px}.p-organizationchart-table>tbody>tr>td{text-align:center;vertical-align:top;padding:0 .75rem}.p-organizationchart-preservespace .p-organizationchart-node-hidden{visibility:hidden;display:inherit}.p-organizationchart .p-organizationchart-node-hidden{display:none}.p-organizationchart-node-content .p-node-toggler{position:absolute;bottom:-.75rem;margin-left:-.75rem;z-index:2;left:50%;-webkit-user-select:none;user-select:none;cursor:pointer;width:1.5rem;height:1.5rem}@media (max-width:767px){.work-tabs ul li{margin:0 auto}.number-crore .indicators{margin:0!important}.work-tabs ul.nav-pills{padding:0}.work-tabs ul li button{padding:10px!important;font-size:12px!important}ul#pills-tab{display:block;border-radius:30px;padding:5px}.work-tabs{max-width:100%;border-radius:10px}button#pills-financial-tab{border-radius:50px;width:100%}button#pills-status-tab{width:100%;border-radius:30px}}@media (max-width:567px){.nav-pills .show>.nav-link button#pills-financial-tab,.work-tabs .nav-pills .nav-link.active,.work-tabs .nav-pills .nav-link.right-tab-border.active{border-radius:50px!important}.work-tabs .nav-pills{border:none!important}.work-tabs .nav-pills .nav-link{border-radius:50px!important;border:1px solid #ccc;margin:5px 0}}
+  

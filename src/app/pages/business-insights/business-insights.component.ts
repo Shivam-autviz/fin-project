@@ -181,7 +181,6 @@ export class BusinessInsightsComponent {
   }
 
   ngOnDestroy() {
-    // Destroy the DataTable when the component is destroyed to avoid memory leaks
     $('#dataTable').DataTable().destroy(true);
   }
 
